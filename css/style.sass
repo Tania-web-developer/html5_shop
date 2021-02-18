@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap');
+    
+$header-bg: #222222 
+$dark-grey: #222224 
+$accent: #F16D7F 
+$light-grey: #F8F8F8 
+$main-bg-color: #F1E4E6 
+$text-header: #222222 
+$main-text: #5D5D5D 
+$subscribe: #E1E1E1 
+$font-size: 16px 
+$app-width: 1140px
+*
+    box-sizing: border-box 
+body
+    margin: 0 
+    min-height: 100vh 
+    display: flex 
+    flex-direction: column 
+    justify-content: space-between 
+    font-size: $font-size 
+    font-family: 'Lato', Arial, Helvetica, sans-serif  
+.hidden
+    position: absolute 
+    left: -999999990px 
+    width: 0 
+    height: 0 
+    visibility: hidden 
+a
+    color: rgb(111, 110, 110) 
+    text-decoration: none 
+p
+    font-size: .9rem 
+    font-weight: 300 
+    color: $main-text 
+    line-height: 1.1 
+h1
+    font-size: 3rem 
+    font-weight: 900     
+    text-transform: uppercase 
+    margin: 0 
+h2
+    font-size: 2rem 
+    font-weight: 700 
+    text-transform: uppercase 
+    margin: 0 
+h3
+    font-weight: 700 
+    font-size: 1.5rem 
+    margin: 0 
+    text-transform: uppercase 
+h4
+    font-size: 1rem 
+    font-weight: 400 
+    text-transform: uppercase 
+    margin: 0 
+h5
+    font-weight: 400 
+    font-size: .8rem 
+    text-transform: uppercase 
+    margin: 0 
+%center
+    padding: 0 calc(50% - 1140px/ 2) 
+.wrap
+    max-width: 1140px 
+    margin: 0 auto 
+.container
+    max-width: 1140px 
+.btn
+    font-weight: 400 
+    font-size: 1.1rem 
+    text-transform: capitalize 
+    padding: 1rem 2.5rem 
+    color: $accent 
+    border: solid 1px $accent 
+    background-color: white 
+    cursor: pointer
+    &:hover
+        background-color: $accent 
+        color: white    
+
+
+.active
+    color: $accent!important
+    
+/* header */
+.header
+    @extend %center
+    background-color: $header-bg 
+    color: white     
+.nav
+    display: flex 
+    justify-content: space-between 
+    align-items: center 
+    padding: 1rem 0 
+    span
+        padding: 0 1rem 
+    a
+        margin-right: .7rem
+    .part-right 
+        position: relative 
+    button
+        background-color: rgba(0,0,0,0) 
+        cursor: pointer 
+        border: none 
+        padding: 0 1rem    
+        .icon      
+            fill: white 
+            font-size: 1.5rem             
+            &:hover
+                fill: $accent
+.badge
+    position: absolute
+    right: 10px
+    top: -4px;
+    border-radius: 50%
+    background: #F16D7F
+    font-size: .6rem
+    font-weight: 400
+    width: .95rem
+    text-align: center
+    padding: .14rem 0
+    color: white
+
+/* promo */
+
+.promo
+    @extend %center
+    background-color: #F1E4E6
+    img
+        display: block  
+.promo-container
+    display: flex 
+    align-items: center 
+    margin-bottom: 4rem 
+.promo-item
+    display: block 
+    min-width: 54% 
+.promo-caption
+    border-left: solid #F16D7F 12px 
+    padding: .3rem 0 .3rem .8rem 
+    line-height: 0.9 
+    span
+        font-size: 2rem 
+        font-weight: 700
+    span:nth-child(3)
+        color: #F16D7F  
+
+/* catalog */
+.catalog 
+    @extend %center
+.catalog-container
+    display: flex 
+    flex-wrap: wrap 
+    justify-content: space-between 
+    margin-bottom: 4rem 
+.catalog-item
+    display: flex 
+    margin-bottom: 1.8rem 
+    padding: 6.6rem 0 
+    max-width: 31.6% 
+    flex: 1 
+    &:focus     
+        outline: none!important        
+    &:hover       
+        filter: saturate(200%) 
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px 
+.women
+    background: #222224 url(../img/women.jpg) center/cover no-repeat 
+.men
+    background: #222224 url(../img/men.jpg) center/cover no-repeat 
+.kids
+    background: #222224 url(../img/kids.jpg) center/cover no-repeat 
+.accessories
+    flex: 3 
+    min-width: 100% 
+    background: #222224 url(../img/accessories.jpg) center/cover no-repeat 
+.title
+    text-align: center 
+    margin-left: auto 
+    margin-right: auto 
+    span
+        color: $accent 
+        font-weight: 700 
+        font-size: 1.5rem 
+        line-height: 1.6 
+    h4
+        color: white 
+
+/* fetured */
+.fetured
+    @extend %center
+.fetured-items
+    display: flex 
+    flex-direction: row 
+    justify-content: space-between 
+    flex-wrap: wrap 
+    margin-bottom: 2rem  
+    img 
+        display: block; 
+ 
+.fetured-container
+    text-align: center 
+    margin-bottom: 6rem 
+.fetured-header 
+    h2
+        text-transform: capitalize 
+        font-weight: 400 
+    p
+        margin: .5rem 0 2.7rem 
+        color: #9F9F9F 
+        font-weight: 400 
+.item
+    width: 22.5rem 
+    text-align: left 
+    font-weight: 300 
+    font-size: .9rem 
+    background-color: $light-grey 
+    margin-bottom: 1.6rem 
+    &:hover
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px
+.item-caption
+    padding: 1.5rem 1.1rem
+.price
+    &:before
+        content: "$ " 
+    color: $accent 
+    font-size: 1rem 
+    font-size: 1rem 
+    font-weight: 400 
+    text-transform: uppercase 
+    margin: 0 
+
+/* aside */
+
+.advantages
+    @extend %center 
+    background: $dark-grey
+    .advantages-container
+        display: flex 
+        justify-content: space-between 
+        text-align: center 
+        padding: 6rem 2rem 
+        flex-wrap: wrap 
+.advantages-item
+    width: 28% 
+    p
+        color: #FBFBFB 
+        font-weight: 300 
+        line-height: 1.5
+    h4
+        text-transform: capitalize 
+        color: #FBFBFB 
+        font-size: 1.2rem 
+    .icon
+        display: flex 
+        align-items: center 
+        justify-content: center 
+        min-height: 27% 
+        margin-bottom: 1.5rem 
+
+/* feedback */
+
+.feedback
+    background: #9F9F9F url(../img/feedback_bg.jpg) center/cover no-repeat 
+.feedback-container
+    display: flex 
+    justify-content: space-between 
+    align-items: center 
+    padding: 6rem 0 9.5rem 0 
+    text-align: center 
+    flex-wrap: wrap 
+
+/* reviews */
+.reviews-item
+    max-width: 35% 
+    padding: .5rem 
+    img
+        border-radius: 50%
+    p
+        font-weight: 400 
+        font-size: 1.25rem 
+        line-height: 1.3 
+        color: $dark-grey
+        span
+            font-style: italic 
+
+/* subscribe */
+
+.subscribe-item
+    padding-right: 5.4rem
+    h3
+        margin-bottom: 2rem
+        span
+            font-weight: 400 
+            font-size: 1.1rem  
+    input
+        border: none 
+        background: $subscribe
+        min-width: 16rem 
+        padding: 1.22rem 1.2rem 
+        border-top-left-radius: 30px 
+        border-bottom-left-radius: 30px        
+        &:focus, 
+            outline: none
+        &:hover
+            background: lightgrey              
+        &:placeholder
+            font-weight: 400 
+            font-size: .85rem 
+            text-transform: capitalize    
+
+.subscribe-btn
+    &:hover
+        background: $main-text 
+    &:focus
+        outline: none
+    border: none 
+    background-color: $accent 
+    color: #ffff 
+    padding: 1.22rem 
+    border-top-right-radius: 30px 
+    border-bottom-right-radius: 30px 
+    cursor: pointer 
+    margin-left: -.3rem 
+    font-weight: 400 
+    font-size: .85rem  
+
+/* footer */
+
+.footer
+    background: $dark-grey
+    @extend %center
+    p
+        font-weight: 400 
+        font-size: 1rem 
+        color: #FBFBFB 
+        margin: 0  
+.footer-container
+    display: flex 
+    justify-content: space-between 
+    align-content: center 
+    padding: 1.5rem 0 
+
+/* social-icons */
+.social-icons      
+    .fab
+        background: #FBFBFB 
+        padding: .5rem
+        margin-right: .3rem 
+        width: 2rem        
+        text-align: center 
+        cursor: pointer 
+        color: black
+        &:hover
+            background: $accent 
+            color: white
+
+.rights
+    padding: .5rem 0 
+ 
+/* page catalog */
+
+/* header */
+.main-header
+    @extend %center 
+    background: $main-bg-color
+    margin-bottom: 3rem 
+.main-header-container    
+    display: flex
+    justify-content: space-between    
+    padding: 3.6rem 0 
+    .main-title
+        h1
+            color: $accent
+            font-size: 1.5rem
+            font-weight: 400
+    .breadcrumb
+        display: flex
+        margin: auto 0
+        text-transform: uppercase
+        color: #636363
+        a
+            &:hover
+                color: $accent
+
+/* filter */ 
+
+.filter
+    background: none
+    display: flex    
+    padding-bottom: 2.4rem
+    &:hover 
+        fill: $accent
+        color: $accent
+        box-shadow: none      
+    
+        
+    
+    
+details
+    position: relative
+    
+    summary
+        display: block
+        margin: 0 1rem 0 0
+        display: flex 
+        align-items: flex-end
+        color: #6F6E6E       
+        &:hover
+           color: $accent
+        h5
+            margin-right:.5rem!important
+        &::-webkit-details-marker 
+            display: none
+        &:focus
+            outline: none    
+    .expand-list
+        position: absolute
+        display: flex
+        flex-direction: column
+        justify-content: space-around        
+        top: 23px
+        left: -16px
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+        background: white
+        width: 5rem
+        height: 6.4rem
+        padding: .5rem
+        color: #6F6E6E
+        font-weight: 400
+        
+        
+.main-filter
+    color: black
+    display: flex    
+    h4
+        margin-right: .8rem 
+        color: black 
+        font-weight: 600 
+              
+    svg
+        margin: auto 0
+        
+.pagination
+    display: flex
+    justify-content: center    
+
+.pagination-container
+    display: flex    
+    border: solid 1px #EBEBEB
+    padding: 0
+    li
+       list-style-type: none
+       padding: .5rem
+       a
+            &:hover
+                color: $accent              
+            font-size: 1rem
+            font-weight: 300
+            color: #c4c4c4
+            .fas
+                color: black
+                &:hover
+                    color: $accent   
+                    
+
+
+
+
+    
+
+
+
+                 
+       
+
