@@ -1,0 +1,94 @@
+.header
+    @extend %center    
+    background-color: $header-bg 
+    color: white   
+    
+    
+.nav
+    display: flex 
+    position: relative    
+    justify-content: space-between 
+    align-items: center 
+    padding: 1rem 0 
+    &-right
+        display: flex         
+    &-btn
+        position: relative 
+        background-color: rgba(0,0,0,0) 
+        cursor: pointer 
+        border: none 
+        padding: 0
+        margin: 0 .8rem 
+        &:focus
+            outline: none   
+        &-icon                 
+            fill: white                     
+            &:hover
+                fill: $accent
+
+.badge
+    position: absolute
+    right: -5px;
+    top: -2px;
+    border-radius: 50%
+    background: #F16D7F
+    font-size: .6rem
+    font-weight: 400
+    width: .95rem
+    text-align: center
+    padding: .14rem 0
+    color: white
+    &::after
+        content: "5"
+
+
+   
+
+.menu
+    position: relative    
+    background: white
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    width: 14.5rem  
+    padding: 2rem
+    position: relative    
+    &-close-btn 
+        position: absolute
+        right: 10px
+        top: 10px
+    &-list
+        padding: .5rem 0
+    &-dropdown-list
+        padding-left: 1rem
+        margin: .6rem 0 
+    &-dropdown-item
+        padding: .3rem 0
+    &-title        
+        font-weight: 700
+        color: black
+    &-link
+        color: #6F6E6E;
+        font-size: .8rem
+
+  
+
+
+.modal-fade   
+    position: fixed
+    background: rgba(0, 0, 0, 0.5)
+    left: 0
+    right: 0
+    top: 4.5rem      
+    justify-content: flex-end
+    height: 100vh
+    display: none    
+    &-open
+        display: flex
+
+.collapse-btn
+    position: absolute
+    top: 15px;
+    right: 2px;
+    
+
+
+    
