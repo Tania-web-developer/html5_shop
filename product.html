@@ -150,7 +150,12 @@
     </section>
     <section class="slider">
       <div class="slider-container">
-        <img class="slider-img" src="./img/slider_1.jpg" alt="slider_1">
+
+        <video poster="./img/slider_1.jpg" controls muted>
+          <source src="./img/promo.mp4" type="video/mp4">
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+
         <button class="slider-btn slider-btn-left">
           <i class="fas fa-chevron-left"></i>
         </button>
@@ -222,8 +227,8 @@
               <h5>QUANTITY</h5>
               <i class="fas fa-chevron-down"></i>
             </summary>
-            <div class="expand-list">              
-                <input class="details-quantity-input" type="number" id="quantity" name="quantity" value="0">                         
+            <div class="expand-list">
+              <input class="details-quantity-input" type="number" id="quantity" name="quantity" value="0">
             </div>
           </details>
         </div>
@@ -237,16 +242,16 @@
 
       </div>
     </section>
-    <section class="fetured">
-      <div class="fetured-container container">
-        <div class="fetured-header hidden">
-          <h2>Fetured Items</h2>         
+    <section class="catalog">
+      <div class="catalog-container container">
+        <div class="catalog-header hidden">
+          <h2>Fetured Items</h2>
         </div>
-        <div class="fetured-items">
-          <a href="#">
-            <div class="item">
+        <div class="catalog-list">
+          <a href="product.html">
+            <div class="catalog-card">
               <img src="./img/Image__4.jpg" alt="ELLERY X M'O CAPSULE">
-              <div class="item-caption">
+              <div class="catalog-card-caption">
                 <h5>ELLERY X M'O CAPSULE</h5>
                 <p>Known for her sculptural takes on traditional tailoring,
                   Australian arbiter of cool Kym Ellery teams up
@@ -256,29 +261,33 @@
               </div>
             </div>
           </a>
-          <div class="item">
-            <img src="./img/Image__5.jpg" alt="ELLERY X M'O CAPSULE">
-            <div class="item-caption">
-              <h5>ELLERY X M'O CAPSULE</h5>
-              <p>Known for her sculptural takes on traditional tailoring,
-                Australian arbiter of cool Kym Ellery teams up
-                with Moda Operandi.
-              </p>
-              <p class="price">52.00</p>
+          <a href="product.html">
+            <div class="catalog-card">
+              <img src="./img/Image__5.jpg" alt="ELLERY X M'O CAPSULE">
+              <div class="catalog-card-caption">
+                <h5>ELLERY X M'O CAPSULE</h5>
+                <p>Known for her sculptural takes on traditional tailoring,
+                  Australian arbiter of cool Kym Ellery teams up
+                  with Moda Operandi.
+                </p>
+                <p class="price">52.00</p>
+              </div>
             </div>
-          </div>
-          <div class="item">
-            <img src="./img/Image__6.jpg" alt="ELLERY X M'O CAPSULE">
-            <div class="item-caption">
-              <h5>ELLERY X M'O CAPSULE</h5>
-              <p>Known for her sculptural takes on traditional tailoring,
-                Australian arbiter of cool Kym Ellery teams up
-                with Moda Operandi.
-              </p>
-              <p class="price">52.00</p>
+          </a>
+          <a href="product.html">
+            <div class="catalog-card">
+              <img src="./img/Image__6.jpg" alt="ELLERY X M'O CAPSULE">
+              <div class="catalog-card-caption">
+                <h5>ELLERY X M'O CAPSULE</h5>
+                <p>Known for her sculptural takes on traditional tailoring,
+                  Australian arbiter of cool Kym Ellery teams up
+                  with Moda Operandi.
+                </p>
+                <p class="price">52.00</p>
+              </div>
             </div>
-          </div>
-        </div>        
+          </a>
+        </div>
       </div>
     </section>
   </main>
@@ -301,9 +310,9 @@
                   FOR OUR NEW LETTER AND PROMOTION</span>
               </h3>
               <form>
-              <input required  value=""  pattern="[^ @]*@[^ @]*" placeholder="Enter Your Email"
-                type="email" name="email" id="email">
-              <button type="submit"   class="subscribe-btn">Subscribe</button>
+                <input required value="" pattern="[^ @]*@[^ @]*" placeholder="Enter Your Email" type="email"
+                  name="email" id="email">
+                <button type="submit" class="subscribe-btn">Subscribe</button>
               </form>
             </article>
           </section>
