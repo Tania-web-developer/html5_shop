@@ -41,15 +41,18 @@ h4
 h5
     @include headers(400)
 
+img
+    max-width: 100%
 
 %center
-    padding: 0 calc(50% - 1140px/ 2) 
+    padding: 0 calc(50% - 1140px/ 2)
+     
 
-=flexAlign($property)
+=flexAlign($direction, $justify: center, $align: center )
     display: flex
-    flex-direction: $property
-    justify-content: center
-    align-items: center
+    flex-direction: $direction
+    justify-content: $justify
+    align-items: $align
 
 =transform($property) 
     transform: $property  
@@ -79,7 +82,7 @@ video
 .container
     max-width: $app-width 
 
-.btn
+%btn
     +flexAlign(row)
     font-weight: 400 
     font-size: 1rem 
@@ -96,6 +99,18 @@ video
         fill: white 
     &:focus
         outline: none
+
+%btn-icon
+    position: relative 
+    background-color: rgba(0,0,0,0) 
+    cursor: pointer 
+    border: none 
+    padding: 0
+    margin: 0 .8rem 
+    &:focus
+        outline: none
+        color: grey   
+   
 
 
 .active

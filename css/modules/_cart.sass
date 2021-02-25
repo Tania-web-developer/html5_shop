@@ -1,0 +1,136 @@
+.cart
+    @extend %center                  
+    &-items
+        +flexAlign(row, space-between, flex-start)
+        padding-top: 3rem    
+        &-list
+           flex: 50%             
+    &-product
+        position: relative
+        &:hover
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        @include headers(400, 1.2rem)
+        text-transform: capitalize;
+        color: #575757         
+        +flexAlign(row, center, flex-start)
+        margin-bottom: 2rem        
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        &-description
+            padding: 1.3rem 10.5rem 1.5rem 2rem                  
+        &-header
+            @include headers(400, 1.5rem)
+            color: $dark-grey
+            margin-bottom: 1rem
+        &-body
+            line-height: 1.6              
+    &-btn
+        position: absolute        
+        top: 26px;
+        right: 7px;      
+        @extend %btn-icon       
+        &-icon
+            @include styleIcon(#575757, $hover)
+            width: 1.1rem
+            height: 1.1rem
+    &-info
+        width: 32%        
+    &-form
+        padding: 1rem 0  
+        margin-bottom: 1.7rem  
+        +flexAlign(column, center, flex-start)
+        h4
+            font-weight: 300
+            margin-bottom: 1.2rem 
+        input
+            width: 100%
+            font-size: .8rem
+            padding: 1rem 2rem
+            margin-bottom: 1.2rem 
+            &:hover
+                color: #B1B1B1
+    &-checkout         
+        padding: 2.5rem
+        background: #F5F3F3
+        text-align: right
+        div:first-child
+            font-size: .7rem
+            color: #4A4A4A
+            font-weight: 400
+        div:nth-child(2)     
+            font-size: 1rem
+            color: #4A4A4A
+            padding-bottom: 1.4rem
+            font-weight: 300
+            border-bottom: solid 1px #E2E2E2;
+            margin-bottom: .5rem
+        &-item           
+           padding: .5rem 0
+           
+
+.grand-total
+    font-weight: 700
+    color: $accent
+    margin-left: 1rem
+
+.sub-total    
+    margin-left: .1rem    
+
+
+
+.checkout-btn
+    @extend %btn
+    background: $accent
+    color: white
+    width: 100%
+    margin: 0 auto
+    font-weight: 300
+    &:hover
+        background: white
+        color: $accent
+    
+
+
+
+
+
+                
+    
+.form-btn
+    @extend %btn
+    padding: .6rem .7rem
+    font-size: .7rem
+    color: #4A4A4A
+    border: solid 1px #4A4A4A
+    &:hover
+        border: solid 1px $accent
+        
+
+
+
+
+
+.product-info
+    span   
+        color: #6F6E6E
+        padding: 0 .4rem
+    &-quantity
+        padding: .2rem .5rem
+        margin-left: 1.5rem 
+        border: solid #EAEAEA 1px
+        width: 2.8rem
+        font-size: 1rem
+    
+
+.btn-section
+    +flexAlign(row, space-between) 
+    padding: 3.7rem 0
+
+.card-product-btn
+    @extend %btn         
+    color: black
+    border: #A4A4A4 1px solid
+    &:hover
+        border: $accent 1px solid    
+
+
+
