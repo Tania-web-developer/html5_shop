@@ -1,0 +1,93 @@
+.advantages
+    @extend %center 
+    background: $dark-grey
+    &-container
+        display: flex 
+        justify-content: space-between 
+        text-align: center 
+        padding: 6rem 2rem 
+        flex-wrap: wrap 
+    &-item
+        width: 28% 
+    p
+        color: #FBFBFB 
+        font-weight: 300 
+        line-height: 1.5
+    h4
+        text-transform: capitalize 
+        color: #FBFBFB 
+        font-size: 1.2rem 
+    .icon
+        display: flex 
+        align-items: center 
+        justify-content: center 
+        min-height: 27% 
+        margin-bottom: 1.5rem 
+
+/* feedback */
+
+.feedback
+    background: #9F9F9F url(../img/feedback_bg.jpg) center/cover no-repeat 
+    &-container
+        display: flex 
+        justify-content: space-between 
+        align-items: center 
+        padding: 6rem 0 9.5rem 0 
+        text-align: center 
+        flex-wrap: wrap 
+
+/* reviews */
+.reviews-item
+    max-width: 35% 
+    padding: .5rem 
+    img
+        border-radius: 50%
+    p
+        font-weight: 400 
+        font-size: 1.25rem 
+        line-height: 1.3 
+        color: $dark-grey
+        span
+            font-style: italic 
+
+/* subscribe */
+
+.subscribe-item
+    padding-right: 5.4rem
+    h3
+        margin-bottom: 2rem
+        span
+            font-weight: 400 
+            font-size: 1.1rem  
+    input
+        border: none 
+        background: $subscribe
+        min-width: 16rem
+        font-size: .9rem  
+        padding: 1.22rem 1.2rem 
+        border-top-left-radius: 30px 
+        border-bottom-left-radius: 30px        
+        &:focus
+            outline: none
+        &:hover
+            background: lightgrey              
+        &:placeholder
+            font-weight: 400 
+            font-size: 1.5rem 
+            text-transform: capitalize    
+
+.subscribe-btn
+    &:hover
+        background: $main-text 
+    &:focus
+        outline: none
+    border: none 
+    background-color: $accent 
+    color: #ffff 
+    padding: 1.22rem 
+    border-top-right-radius: 30px 
+    border-bottom-right-radius: 30px 
+    cursor: pointer 
+    margin-left: -.3rem 
+    font-weight: 400 
+    font-size: .9rem  

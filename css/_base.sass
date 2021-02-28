@@ -111,7 +111,28 @@ video
         outline: none
         color: grey   
    
+%form
+        padding: 1rem 0  
+        margin-bottom: 1.7rem  
+        +flexAlign(column, center, flex-start)
+        h4
+            font-weight: 300
+            margin-bottom: 1.2rem 
+        input
+            width: 100%
+            font-size: .8rem            
+            padding: 1rem 1.3rem
+            margin-bottom: 1.2rem 
+            &::placeholder
+                color: #B1B1B1
+            &:hover
+                color: #B1B1B1
+           
 
+input [type='radio'] 
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
 
 .active
     color: $accent!important
