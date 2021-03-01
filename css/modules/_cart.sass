@@ -1,5 +1,6 @@
 .cart
-    @extend %center                  
+    @extend %center 
+    transition: .5s                 
     &-items
         +flexAlign(row, space-between, flex-start)
         padding-top: 3rem    
@@ -7,8 +8,9 @@
            flex: 50%             
     &-product
         position: relative
-        &:hover
+        &:hover            
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            animation: touch .5s 1 
         @include headers(400, 1.2rem)
         text-transform: capitalize;
         color: #575757         

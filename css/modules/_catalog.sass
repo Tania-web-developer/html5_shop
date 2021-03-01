@@ -2,11 +2,11 @@
     @extend %center   
     &-container        
         text-align: center 
-        margin-bottom: 6rem        
+        margin-bottom: 6rem                 
     &-title        
         text-transform: capitalize 
         font-weight: 400 
-    &-description
+    &-description        
         margin: .5rem 0 2.7rem 
         color: #9F9F9F 
         font-weight: 400
@@ -15,58 +15,95 @@
         flex-direction: row 
         justify-content: space-between 
         flex-wrap: wrap 
-        margin-bottom: 2rem  
+        margin-bottom: 2rem         
         img 
-            display: block;  
+            display: block 
     &-card
+        position: relative
         width: 22.5rem 
         text-align: left 
         font-weight: 300 
         font-size: .9rem 
         background-color: $light-grey 
         margin-bottom: 1.6rem 
+        transition: 0.5s               
         &:hover
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px
+            box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15)
+        .add-cart
+            &:hover
+               opacity: 1               
         &-caption
             padding: 1.5rem 1.1rem
-    
+            h5
+                &:hover
+                    color: $accent
+                    transform: translateY(3px)
     &-btn
         @extend %btn        
         margin: 0 auto
         max-width: 13.8rem
 
+.add-cart
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    height: 26.24rem
+    background-color: rgba(58, 56, 56, 0.83)
+    display: flex
+    justify-content: center
+    align-items: center
+    opacity: 0
+    transition: 0.5s                
+    &-btn
+        @extend %btn
+        padding: .4rem .7rem 
+        border: solid white 1px
+        background: none
+        color: white
+        fill: white        
+        &:hover          
+            animation: pulse .5s infinite
+       
+
 
 .main-filter 
     position: relative    
     outline: none
-    border: none      
+    border: none
+    z-index: 300                     
     &-content 
         position: absolute
         padding: 1rem 1.3rem 1.5rem
         background: white          
         width: 22.5rem
-        left: 0
+        left: 0     
+               
         box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px
     &-header
         display: flex
         padding: 1.3rem
+        
     &-title        
         summary     
             border-bottom: 1px solid #EBEBEB
             border-left: solid 5px $accent  
             padding: .8rem
+            transition: 1s
+            animation: showFilter .5s linear 
             
 
 
 .main-filter[open]           
     background: white
     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
-    width: 22.5rem
+    width: 22.5rem     
 
 .main-filter[open] > summary 
     color: plum
     outline: none
-    border: none;
+    border: none
+    
                 
     
        
