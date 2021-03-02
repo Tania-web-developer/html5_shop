@@ -1,9 +1,13 @@
 .header
     @extend %center    
     background-color: $header-bg 
-    color: white   
+    color: white
+    width: 100% 
+    position: fixed 
+    z-index: 300  
     
-    
+.main-header 
+    padding-top: 4.5rem   
 .nav
     display: flex 
     position: relative    
@@ -60,6 +64,8 @@
     &-link
         color: #6F6E6E;
         font-size: .9rem
+        &:hover
+            color: $accent
 
 
 
@@ -84,7 +90,10 @@
     right: 2px;
     
 
-
+.brand-1 
+    animation: brand_animation 1.7s linear      
+    &:hover
+        transform: scale(1.2)
 
     
            

@@ -249,32 +249,32 @@
 @-webkit-keyframes promo_caption {
   0% {
     opacity: 0;
+    -webkit-transform: scale(0) rotate(960deg);
+            transform: scale(0) rotate(960deg);
   }
-  40% {
-    opacity: 1;
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  100% {
+  30% {
     opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+  100% {
+    opacity: 1;
   }
 }
 
 @keyframes promo_caption {
   0% {
     opacity: 0;
+    -webkit-transform: scale(0) rotate(960deg);
+            transform: scale(0) rotate(960deg);
   }
-  40% {
-    opacity: 1;
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  100% {
+  30% {
     opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -296,11 +296,17 @@
     -webkit-transform: scale(3) rotate(360deg);
             transform: scale(3) rotate(360deg);
   }
+  90% {
+    left: 50%;
+    opacity: .5;
+    -webkit-transform: translate(-680px, -420px) scale(0.4);
+            transform: translate(-680px, -420px) scale(0.4);
+  }
   100% {
     left: 50%;
     opacity: 0;
-    -webkit-transform: translateX(-200%) scale(3);
-            transform: translateX(-200%) scale(3);
+    -webkit-transform: translate(-680px, -420px) scale(0.1);
+            transform: translate(-680px, -420px) scale(0.1);
   }
 }
 
@@ -322,37 +328,42 @@
     -webkit-transform: scale(3) rotate(360deg);
             transform: scale(3) rotate(360deg);
   }
+  90% {
+    left: 50%;
+    opacity: .5;
+    -webkit-transform: translate(-680px, -420px) scale(0.4);
+            transform: translate(-680px, -420px) scale(0.4);
+  }
   100% {
     left: 50%;
     opacity: 0;
-    -webkit-transform: translateX(-200%) scale(3);
-            transform: translateX(-200%) scale(3);
+    -webkit-transform: translate(-680px, -420px) scale(0.1);
+            transform: translate(-680px, -420px) scale(0.1);
   }
 }
 
-.brand {
-  -webkit-transition: .5s;
-  transition: .5s;
+@-webkit-keyframes brand_animation {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.brand .cls-3 {
-  -webkit-animation: 1s 1 show;
-          animation: 1s 1 show;
-}
-
-.brand .cls-2 {
-  -webkit-animation: 2s .5s 1 show;
-          animation: 2s .5s 1 show;
-}
-
-.brand .cls-1 {
-  -webkit-animation: 3s  1s 1 show;
-          animation: 3s  1s 1 show;
-}
-
-.brand:hover {
-  -webkit-transform: translateY(4px);
-          transform: translateY(4px);
+@keyframes brand_animation {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 * {
@@ -723,6 +734,13 @@ details summary:focus {
 .header {
   background-color: #222222;
   color: white;
+  width: 100%;
+  position: fixed;
+  z-index: 300;
+}
+
+.main-header {
+  padding-top: 4.5rem;
 }
 
 .nav {
@@ -814,6 +832,10 @@ details summary:focus {
   font-size: .9rem;
 }
 
+.menu-link:hover {
+  color: #F16D7F;
+}
+
 .modal-fade {
   position: fixed;
   background: rgba(0, 0, 0, 0.5);
@@ -842,8 +864,19 @@ details summary:focus {
   right: 2px;
 }
 
+.brand-1 {
+  -webkit-animation: brand_animation 1.7s linear;
+          animation: brand_animation 1.7s linear;
+}
+
+.brand-1:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 .promo {
   background-color: #F1E4E6;
+  padding-top: 4.5rem;
 }
 
 .promo img {
@@ -887,7 +920,7 @@ details summary:focus {
   opacity: 0;
   width: 250px;
   height: 150px;
-  background: url("../../img/brand_bg.svg") center/contain no-repeat;
+  background: url("../img/brand_bg.svg") center/contain no-repeat;
   -webkit-animation: promo_brand 2s 1;
           animation: promo_brand 2s 1;
 }
@@ -1805,6 +1838,8 @@ details summary:focus {
   color: #F16D7F;
   font-size: .9rem;
   margin-bottom: .7rem;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .product-collection::after {
@@ -1813,6 +1848,17 @@ details summary:focus {
   content: " ";
   background-color: #F16D7F;
   width: 40%;
+}
+
+.product-collection:hover::after {
+  display: inline-block;
+  height: 3px;
+  content: " ";
+  background-color: #F16D7F;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: scale(2.5, 1);
+          transform: scale(2.5, 1);
 }
 
 .product-name {
