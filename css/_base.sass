@@ -46,8 +46,13 @@ img
 
 %center
     padding: 0 calc(50% - 1140px/ 2)
+    @include break(1200px)
+        padding: 0 calc(50% - 900px/ 2)
+    @include break(950px)
+        padding: 0 calc(50% - 760px/ 2)
     
-     
+    
+ 
 
 =flexAlign($direction, $justify: center, $align: center )
     display: flex
@@ -81,7 +86,11 @@ video
     margin: 0 auto 
 
 .container
-    max-width: $app-width 
+    max-width: $app-width
+    @include break(1200px) 
+        max-width: 900px
+    @include break(950px)
+        max-width: 768px
 
 %btn
     +flexAlign(row)

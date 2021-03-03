@@ -13,7 +13,14 @@
     &-list
         display: flex 
         flex-direction: row 
-        justify-content: space-between 
+        justify-content: space-between
+        @include break(1200px) 
+            justify-content: center               
+            .six
+                display: none
+        @include break(950px)                      
+            #first //problem with first elemen in list number four
+                margin: 0 .9rem .9rem 0  
         flex-wrap: wrap 
         margin-bottom: 2rem         
         img 
@@ -25,8 +32,13 @@
         font-weight: 300 
         font-size: .9rem 
         background-color: $light-grey 
-        margin-bottom: 1.6rem 
-        transition: 0.5s               
+        margin-bottom: 1.6rem         
+        @include break(1200px)  
+            margin: 0 .8rem 1.6rem .8rem                            
+        @include break(950px)
+            margin: 0 0 .9rem 0rem  
+            &:nth-child(even)          
+                margin: 0 0 .9rem .9rem                             
         &:hover
             box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15)
         .add-cart
@@ -42,6 +54,15 @@
         @extend %btn        
         margin: 0 auto
         max-width: 13.8rem
+    .filter
+        @include break(1200px) 
+            padding-bottom: .5rem 
+            &:nth-child(3)
+                display: none        
+            &:nth-child(2)
+                justify-content: flex-end
+            
+                
 
 .add-cart
     position: absolute
@@ -71,7 +92,8 @@
     position: relative    
     outline: none
     border: none
-    z-index: 300                     
+    z-index: 300
+    transition: .5s                        
     &-content 
         position: absolute
         padding: 1rem 1.3rem 1.5rem
@@ -82,7 +104,9 @@
         box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px
     &-header
         display: flex
-        padding: 1.3rem
+        padding: 1.3rem        
+        @include break(1200px)
+            padding: 0
         
     &-title        
         summary     

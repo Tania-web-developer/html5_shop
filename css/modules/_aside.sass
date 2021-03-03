@@ -7,8 +7,20 @@
         text-align: center 
         padding: 6rem 2rem 
         flex-wrap: wrap 
+         transition: .5s 
+        @include break(950px)  
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            padding: 4rem 2rem                                   
     &-item
-        width: 28% 
+        width: 28%
+        transition: .5s  
+        @include break(950px)  
+            width: 50%
+            &:nth-child(even)  
+                margin:  2rem  0   
+            
     p
         color: #FBFBFB 
         font-weight: 300 
@@ -29,7 +41,10 @@
 /* feedback */
 
 .feedback
-    background: #9F9F9F url(../img/feedback_bg.jpg) center/cover no-repeat 
+    background: #9F9F9F url(../img/feedback_bg.jpg) center/cover no-repeat
+    transition: .5s 
+    @include break(950px) 
+        background-position:  25%
     &-container
         display: flex 
         justify-content: space-between 
@@ -37,11 +52,22 @@
         padding: 6rem 0 9.5rem 0 
         text-align: center 
         flex-wrap: wrap 
+        @include break(1200px) 
+            padding-left: 4rem
+        @include break(950px) 
+           flex-direction: column          
+           align-items: center
+           padding: 3rem 0 9.5rem 0 
+
 
 /* reviews */
 .reviews-item
     max-width: 35% 
     padding: .5rem 
+    transition: .5s
+    @include break(950px)
+        max-width: 45%  
+
     img
         border-radius: 50%
     p
@@ -56,6 +82,8 @@
 
 .subscribe-item
     padding-right: 5.4rem
+    @include break(950px)         
+        padding: 3rem 0 0 0        
     h3
         margin-bottom: 2rem
         span
