@@ -20,7 +20,10 @@
             width: 50%
             &:nth-child(even)  
                 margin:  2rem  0   
-            
+        @include break(504px)  
+            width: 100%
+            &:nth-child(even)  
+                margin:  2rem  0     
     p
         color: #FBFBFB 
         font-weight: 300 
@@ -66,8 +69,12 @@
     padding: .5rem 
     transition: .5s
     @include break(950px)
-        max-width: 45%  
-
+        max-width: 45% 
+    @include break(733px)
+        max-width: 60%   
+    @include break(380px)
+        max-width: 100% 
+        margin: 0 1rem 2rem 1rem 
     img
         border-radius: 50%
     p
@@ -83,7 +90,10 @@
 .subscribe-item
     padding-right: 5.4rem
     @include break(950px)         
-        padding: 3rem 0 0 0        
+        padding: 3rem 0 0 0 
+    @include break(380px)
+        max-width: 100% 
+        padding: 0 .8rem             
     h3
         margin-bottom: 2rem
         span
@@ -104,7 +114,9 @@
         &:placeholder
             font-weight: 400 
             font-size: 1.5rem 
-            text-transform: capitalize    
+            text-transform: capitalize
+        @include break(380px)
+            min-width: 15rem    
 
 .subscribe-btn
     &:hover

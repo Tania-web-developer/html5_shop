@@ -13,18 +13,24 @@
     &-list
         display: flex 
         flex-direction: row 
-        justify-content: space-between
+        justify-content: space-between        
+        flex-wrap: wrap 
+        margin-bottom: 2rem         
+        img 
+            display: block 
         @include break(1200px) 
             justify-content: center               
             .six
                 display: none
         @include break(950px)                      
             #first //problem with first elemen in list number four
-                margin: 0 .9rem .9rem 0  
-        flex-wrap: wrap 
-        margin-bottom: 2rem         
-        img 
-            display: block 
+                margin: 0 .9rem .9rem 0
+        @include break(766px)  
+            flex-direction: column
+            align-items: center
+        @include break(766px)                      
+            #first //problem with first elemen in list number four
+                margin: 0 0 .9rem 0
     &-card
         position: relative
         width: 22.5rem 
@@ -32,13 +38,17 @@
         font-weight: 300 
         font-size: .9rem 
         background-color: $light-grey 
-        margin-bottom: 1.6rem         
+        margin-bottom: 1.6rem 
+        transition: .5s        
         @include break(1200px)  
             margin: 0 .8rem 1.6rem .8rem                            
         @include break(950px)
             margin: 0 0 .9rem 0rem  
             &:nth-child(even)          
-                margin: 0 0 .9rem .9rem                             
+                margin: 0 0 .9rem .9rem 
+        @include break(762px)
+            &:nth-child(even)          
+                margin: 0 0 .9rem 0                                             
         &:hover
             box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15)
         .add-cart
@@ -93,21 +103,30 @@
     outline: none
     border: none
     z-index: 300
-    transition: .5s                        
+    transition: .5s                              
     &-content 
         position: absolute
         padding: 1rem 1.3rem 1.5rem
         background: white          
         width: 22.5rem
-        left: 0     
-               
+        left: 0                  
         box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px
+        @include break(766px)
+            top: 58px
+
     &-header
         display: flex
         padding: 1.3rem        
         @include break(1200px)
             padding: 0
-        
+        @include break(766px)
+            position: absolute
+            top: 30px
+            left: 10px
+            svg
+                transform: scale(2)
+            h4
+                display: none
     &-title        
         summary     
             border-bottom: 1px solid #EBEBEB
@@ -127,6 +146,7 @@
     color: plum
     outline: none
     border: none
+    
     
                 
     

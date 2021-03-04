@@ -6,13 +6,42 @@
     position: fixed 
     z-index: 300
     transition: .5s    
+
+.main-header
+    @extend %center 
+    background: $main-bg-color
     
-.main-header 
-    padding-top: 4.5rem
-    &-container
-        @include break(950px)
-            margin-left: 1rem
-            margin-right: 1rem
+.main-header-container    
+    display: flex
+    justify-content: space-between   
+    padding: 8rem  0 3.6rem 0  
+    @include break(950px)
+        margin-left: 1rem
+        margin-right: 1rem
+    @include break(490px)
+        flex-direction: column
+        align-items: center 
+        padding: 6rem  0 3.6rem 0
+        margin: 0
+    .main-title
+        @include break(490px)
+            margin-bottom: 2rem       
+        h1
+            color: $accent
+            font-size: 1.5rem
+            font-weight: 400
+    .breadcrumb
+        display: flex
+        margin: auto 0
+        text-transform: uppercase
+        color: #636363
+        a
+            &:hover
+                color: $accent
+        @include break(490px)
+            h5
+                font-size: .8rem
+    
         
      
 .nav
@@ -102,11 +131,16 @@
     
 
 .brand-1 
-    animation: brand_animation 1.7s linear      
+    animation: brand_animation 1.7s linear
+    @include break(950px)
+        animation: none
+          
     &:hover
         transform: scale(1.2)
 
     
            
 
-
+@include break(768px)
+    .login, .cart
+        display: none
