@@ -18,14 +18,15 @@
     @include break(950px)
         margin-left: 1rem
         margin-right: 1rem
-    @include break(490px)
+    @include break(640px)
         flex-direction: column
         align-items: center 
+        justify-content: center
         padding: 6rem  0 3.6rem 0
         margin: 0
     .main-title
-        @include break(490px)
-            margin-bottom: 2rem       
+        @include break(640px)
+            margin: 2rem 0      
         h1
             color: $accent
             font-size: 1.5rem
@@ -142,5 +143,5 @@
            
 
 @include break(768px)
-    .login, .cart
+    .login-i, .cart-i
         display: none

@@ -1,13 +1,16 @@
 .registration
     @extend %center 
-    transition: .5s                       
+    transition: .5s
+    &-container
+        @include break(950px) 
+            padding: 0 .6rem 
+        @include break(768px) 
+            padding: 0 .8rem  
     &-items
         +flexAlign(row, space-between, flex-start)
         flex-basis: 50%
-        @include break(950px) 
-            padding: 0 1rem
-        @include break(750px)
-            +flexAlign(column, center, center)
+        @include break(760px) 
+            +flexAlign(column, center, center)           
     &-form
         max-width: 360px
         @include break(1200px)
@@ -50,6 +53,12 @@
         h3
             font-weight: 300
             margin-bottom: 1rem
+        @include break(760px)
+            padding: 1rem 1rem 1rem 2rem
+        @include break(465px)
+            padding: 1rem 
+        @include break(422px)
+            padding: 1rem .5rem 2rem .5rem 
     &-text 
         font-size: 1.5rem 
         color: black
