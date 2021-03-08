@@ -10,11 +10,13 @@
 .main-header
     @extend %center 
     background: $main-bg-color
+    transition: .5s
     
 .main-header-container    
     display: flex
     justify-content: space-between   
     padding: 8rem  0 3.6rem 0  
+    transition: .5s
     @include break(950px)
         margin-left: 1rem
         margin-right: 1rem
@@ -25,6 +27,7 @@
         padding: 6rem  0 3.6rem 0
         margin: 0
     .main-title
+        transition: .5s
         @include break(640px)
             margin: 2rem 0      
         h1

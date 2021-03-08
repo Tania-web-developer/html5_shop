@@ -30,7 +30,7 @@
             align-items: center
         @include break(766px)                      
             #first //problem with first elemen in list number four
-                margin: 0 0 .9rem 0
+                margin: 1rem 0 .9rem 0
     &-card
         position: relative
         width: 22.5rem 
@@ -66,7 +66,7 @@
         max-width: 13.8rem
     .filter
         @include break(1200px) 
-            padding-bottom: .5rem 
+            padding-bottom: .5rem  
             &:nth-child(3)
                 display: none        
             &:nth-child(2)
@@ -101,8 +101,9 @@
     position: relative    
     outline: none
     border: none
-    z-index: 300
-    transition: .5s                              
+    z-index: 90
+    
+    padding: .5rem                         
     &-content 
         position: absolute
         padding: 1rem 1.3rem 1.5rem
@@ -119,13 +120,15 @@
         @include break(1200px)
             padding: 0
         @include break(766px)
-            position: absolute
-            top: 30px
+            position: absolute            
+            top: 37px
             left: 10px
             svg
                 transform: scale(2)
             h4
                 display: none
+           
+              
     &-title        
         summary     
             border-bottom: 1px solid #EBEBEB
@@ -139,7 +142,10 @@
 .main-filter[open]           
     background: white
     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
-    width: 22.5rem     
+    width: 22.5rem
+    @include break(766px)
+     box-shadow: none
+
 
 .main-filter[open] > summary 
     color: plum
@@ -154,7 +160,7 @@
 .filter
     background: none
     display: flex 
-    align-items: center   
+    align-items: center  
     padding-bottom: 2.4rem
     &:hover 
         fill: $accent

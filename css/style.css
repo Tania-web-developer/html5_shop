@@ -282,8 +282,8 @@
   0% {
     left: 50%;
     opacity: 1;
-    -webkit-transform: translateZ(200) scale(3);
-            transform: translateZ(200) scale(3);
+    -webkit-transform: scale(3);
+            transform: scale(3);
   }
   20% {
     left: 50%;
@@ -314,8 +314,8 @@
   0% {
     left: 50%;
     opacity: 1;
-    -webkit-transform: translateZ(200) scale(3);
-            transform: translateZ(200) scale(3);
+    -webkit-transform: scale(3);
+            transform: scale(3);
   }
   20% {
     left: 50%;
@@ -565,8 +565,8 @@ video {
   border: none;
   padding: 0;
   margin: 0 .8rem;
-  -webkit-transition: all .5ss;
-  transition: all .5ss;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .nav-btn:focus, .cart-btn:focus {
@@ -771,6 +771,8 @@ details summary:focus {
 
 .main-header {
   background: #F1E4E6;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .main-header-container {
@@ -781,6 +783,8 @@ details summary:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 8rem  0 3.6rem 0;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 @media (max-width: 950px) {
@@ -805,6 +809,11 @@ details summary:focus {
     padding: 6rem  0 3.6rem 0;
     margin: 0;
   }
+}
+
+.main-header-container .main-title {
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 @media (max-width: 640px) {
@@ -1215,8 +1224,10 @@ details summary:focus {
   stroke-width: 2;
   stroke-dasharray: 15, 310;
   stroke-dashoffset: 48;
-  -webkit-transition: trasform 0.5s all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: trasform 0.5s all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transition: -webkit-transform 0.5s all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 0.5s all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.5s all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.5s all 1.35s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.5s all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .category-item:nth-child(2) {
@@ -1367,7 +1378,7 @@ details summary:focus {
 
 @media (max-width: 766px) {
   .catalog-list #first {
-    margin: 0 0 .9rem 0;
+    margin: 1rem 0 .9rem 0;
   }
 }
 
@@ -1480,9 +1491,8 @@ details summary:focus {
   position: relative;
   outline: none;
   border: none;
-  z-index: 300;
-  -webkit-transition: .5s;
-  transition: .5s;
+  z-index: 90;
+  padding: .5rem;
 }
 
 .main-filter-content {
@@ -1517,7 +1527,7 @@ details summary:focus {
 @media (max-width: 766px) {
   .main-filter-header {
     position: absolute;
-    top: 30px;
+    top: 37px;
     left: 10px;
   }
   .main-filter-header svg {
@@ -1544,6 +1554,13 @@ details summary:focus {
   -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
           box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
   width: 22.5rem;
+}
+
+@media (max-width: 766px) {
+  .main-filter[open] {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 
 .main-filter[open] > summary {
@@ -1613,10 +1630,6 @@ details summary:focus {
       -ms-flex-align: start;
           align-items: flex-start;
   padding-top: 3rem;
-}
-
-.cart-items-list {
-  flex-basic: 50%;
 }
 
 @media (max-width: 1200px) {
@@ -2020,7 +2033,8 @@ details summary:focus {
   padding: 6rem 2rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  flex-wrap-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 @media (max-width: 950px) {
@@ -2158,13 +2172,19 @@ details summary:focus {
 
 @media (max-width: 733px) {
   .reviews-item {
-    max-width: 60%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 559px) {
+  .reviews-item {
+    max-width: 70%;
   }
 }
 
 @media (max-width: 380px) {
   .reviews-item {
-    max-width: 100%;
+    max-width: 80%;
     margin: 0 1rem 2rem 1rem;
   }
 }
@@ -2245,12 +2265,6 @@ details summary:focus {
   background: lightgrey;
 }
 
-.subscribe-item input:placeholder {
-  font-weight: 400;
-  font-size: 1.5rem;
-  text-transform: capitalize;
-}
-
 @media (max-width: 380px) {
   .subscribe-item input {
     min-width: 15rem;
@@ -2311,6 +2325,8 @@ details summary:focus {
           align-items: flex-start;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 @media (max-width: 760px) {
@@ -2360,6 +2376,8 @@ details summary:focus {
 .registration-form-question {
   max-width: 40%;
   margin-bottom: 2rem;
+  -webkit-transition: .5s;
+  transition: .5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2400,6 +2418,8 @@ details summary:focus {
 
 .registration-benefits {
   padding: 1rem 2rem 0 8rem;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 @media (max-width: 1200px) {
@@ -2454,6 +2474,9 @@ details summary:focus {
 
 .registration ul li {
   padding: .5rem  0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (max-width: 1200px) {
@@ -2470,7 +2493,7 @@ details summary:focus {
   margin: 0 1rem 0 0;
   width: 20px;
   height: 16px;
-  background: url("../../img/check.svg") center/cover no-repeat;
+  background: url("../img/check.svg") center/cover no-repeat;
 }
 
 .radio-item {
@@ -2564,6 +2587,7 @@ details summary:focus {
   .product-container {
     border-left: none;
     border-right: none;
+    margin: -4rem 0 4rem;
   }
 }
 
