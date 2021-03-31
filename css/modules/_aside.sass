@@ -7,7 +7,7 @@
         text-align: center 
         padding: 6rem 2rem 
         flex-wrap: wrap 
-         transition: .5s 
+        transition: .5s 
         @include break(950px)  
             flex-direction: column
             align-items: center
@@ -71,10 +71,17 @@
     @include break(950px)
         max-width: 45% 
     @include break(733px)
-        max-width: 60%   
+        max-width: 50%
+    @include break(559px)
+        max-width: 70%     
     @include break(380px)
-        max-width: 100% 
+        max-width: 80% 
         margin: 0 1rem 2rem 1rem 
+    article
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center    
     img
         border-radius: 50%
     p
@@ -110,11 +117,7 @@
         &:focus
             outline: none
         &:hover
-            background: lightgrey              
-        &:placeholder
-            font-weight: 400 
-            font-size: 1.5rem 
-            text-transform: capitalize
+            background: lightgrey       
         @include break(380px)
             min-width: 15rem    
 

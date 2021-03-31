@@ -12,3 +12,8 @@
     fill: $color
     &:hover
         fill: $hover
+
+
+@mixin break($length)    
+    @media (max-width: $length)  
+        @content 

@@ -15,20 +15,21 @@
         @include break(768px)
             border-left: none
             border-right: none
+            margin: -4rem 0 4rem
     &-collection
         font-weight: 300
         color: $accent
         font-size: .9rem
         margin-bottom: .7rem 
         transition: all 1s
-        &::after 
+        &:after 
             display: inline-block           
             height: 3px
             content: " "            
             background-color: $accent    
             width: 40%
         &:hover
-           &::after 
+           &:after 
             display: inline-block           
             height: 3px
             content: " "            
@@ -83,8 +84,7 @@
         video
             display: none
         &-picture
-            display: block
-         
+            display: block      
                
     &-btn       
         border: none

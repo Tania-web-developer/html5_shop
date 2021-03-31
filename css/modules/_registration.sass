@@ -1,13 +1,17 @@
 .registration
     @extend %center 
-    transition: .5s                       
+    transition: .5s
+    &-container
+        @include break(950px) 
+            padding: 0 .6rem 
+        @include break(768px) 
+            padding: 0 .8rem  
     &-items
         +flexAlign(row, space-between, flex-start)
         flex-basis: 50%
-        @include break(950px) 
-            padding: 0 1rem
-        @include break(750px)
-            +flexAlign(column, center, center)
+        transition: .5s
+        @include break(760px) 
+            +flexAlign(column, center, center)           
     &-form
         max-width: 360px
         @include break(1200px)
@@ -25,7 +29,8 @@
             margin-bottom: 2.2rem         
     &-form-question 
         max-width: 40%        
-        margin-bottom: 2rem       
+        margin-bottom: 2rem 
+        transition: .5s      
         +flexAlign(row, space-between, center)
         input
             display: none
@@ -45,11 +50,18 @@
             margin-left: .8rem
     &-benefits
         padding: 1rem 2rem 0 8rem
+        transition: .5s
         @include break(1200px)
             padding: 1rem 0rem 0 3rem             
         h3
             font-weight: 300
             margin-bottom: 1rem
+        @include break(760px)
+            padding: 1rem 1rem 1rem 2rem
+        @include break(465px)
+            padding: 1rem 
+        @include break(422px)
+            padding: 1rem .5rem 2rem .5rem 
     &-text 
         font-size: 1.5rem 
         color: black
@@ -65,6 +77,7 @@
         transition: .5s         
         li
             padding: .5rem  0
+            display: flex
             @include break(1200px)
                 font-size: 1rem
                 padding: 1rem            
@@ -75,7 +88,7 @@
                 margin: 0 1rem 0 0                
                 width: 20px
                 height: 16px               
-                background: url("../../img/check.svg") center/cover no-repeat 
+                background: url("../img/check.svg") center/cover no-repeat 
                   
 
 .radio-item 
