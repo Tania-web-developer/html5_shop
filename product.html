@@ -111,8 +111,6 @@
             </div>
           </div>
         </nav>
-
-
         <button class="nav-btn login">
           <svg class="nav-btn-icon" role="img" aria-label="Login" width="29" height="29" viewBox="0 0 29 29"
             xmlns="http://www.w3.org/2000/svg">
@@ -132,7 +130,7 @@
     </nav>
   </header>
   <main class="main">
-    <section class="main-header divider-bottom">
+    <section class="main-header">
       <div class="main-header-container container">
         <div class="main-title">
           <h1>NEW ARRIVALS</h1>
@@ -150,172 +148,106 @@
         </div>
       </div>
     </section>
+    <section class="slider">
+      <div class="slider-container">
+
+        <video poster="./img/slider_1.jpg" controls muted>
+          <source src="./img/promo.mp4" type="video/mp4">
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+
+        <button class="slider-btn slider-btn-left">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-btn slider-btn-right">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+    <section class="product">
+      <div class="product-container">
+        <h5 class="product-collection">WOMEN COLLECTION</h5>
+        <h4 class="product-name">MOSCHINO CHEAP AND CHIC</h4>
+        <p class="product-description">Compellingly actualize fully researched processes before proactive outsourcing.
+          Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize
+          parallel core competencies rather than exceptional portals.
+        </p>
+        <div class="price product-price">561</div>
+        <div class="line"></div>
+        <div class="product-filter filter">
+          <details>
+            <summary>
+              <h5>CHOOSE COLOR</h5>
+              <i class="fas fa-chevron-down"></i>
+            </summary>
+            <div class="expand-list">
+              <div>
+                <input type="checkbox" id="xs" name="xs">
+                <label for="xs">red</label>
+              </div>
+              <div>
+                <input type="checkbox" id="s" name="s">
+                <label for="s">blue</label>
+              </div>
+              <div>
+                <input type="checkbox" id="m" name="m">
+                <label for="m">green</label>
+              </div>
+              <div>
+                <input type="checkbox" id="l" name="l">
+                <label for="l">grey</label>
+              </div>
+          </details>
+          <details>
+            <summary>
+              <h5>CHOOSE SIZE</h5>
+              <i class="fas fa-chevron-down"></i>
+            </summary>
+            <div class="expand-list">
+              <div>
+                <input type="checkbox" id="xs" name="xs">
+                <label for="xs">XS</label>
+              </div>
+              <div>
+                <input type="checkbox" id="s" name="s">
+                <label for="s">S</label>
+              </div>
+              <div>
+                <input type="checkbox" id="m" name="m">
+                <label for="m">M</label>
+              </div>
+              <div>
+                <input type="checkbox" id="l" name="l">
+                <label for="l">L</label>
+              </div>
+            </div>
+          </details>
+          <details class="details-quantity">
+            <summary>
+              <h5>QUANTITY</h5>
+              <i class="fas fa-chevron-down"></i>
+            </summary>
+            <div class="expand-list">
+              <input class="details-quantity-input" type="number" id="quantity" name="quantity" value="0">
+            </div>
+          </details>
+        </div>
+        <button class="btn product-btn">
+          <svg class="product-btn-icon" min="0" role="img" aria-label="Cart" width="24" height="26" viewBox="0 0 32 29"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M26.2,29a2.3,2.3,0,0,1-1.7-.8,2.6,2.6,0,0,1-.7-1.7,2.1,2.1,0,0,1,.8-1.7,2.2,2.2,0,0,1,3.4,0,2.1,2.1,0,0,1,.8,1.7,2.6,2.6,0,0,1-.7,1.7,2.3,2.3,0,0,1-1.7.8ZM6.8,26.3a2.8,2.8,0,0,1,.4-1.5,2.9,2.9,0,0,1,1.2-1,2.9,2.9,0,0,1,1.6-.1,2.7,2.7,0,0,1,1.3.7,2.9,2.9,0,0,1,.8,1.4,2.5,2.5,0,0,1-.2,1.5,2,2,0,0,1-1,1.2,2.5,2.5,0,0,1-1.5.5l-1-.2a2.4,2.4,0,0,1-.9-.6,1.9,1.9,0,0,1-.5-.9,1.6,1.6,0,0,1-.2-1Zm3.8-5.6a1.1,1.1,0,0,1-.8-.3.9.9,0,0,1-.4-.6L4.6,2.4H1.2A1.8,1.8,0,0,1,.3,2,1.1,1.1,0,0,1,0,1.2,1.6,1.6,0,0,1,.3.3L1.2,0H5.5l.7.2a1.6,1.6,0,0,1,.4.7l4.8,17.4H24.6L29,8.3H13.9l-.4-.3c-.1-.1-.2-.2-.2-.3a.9.9,0,0,1-.1-.5.9.9,0,0,1,.1-.5l.2-.4.4-.2H30.8l.6.2.4.3A1.4,1.4,0,0,1,32,7a1.3,1.3,0,0,1-.1.6L26.5,20a1,1,0,0,1-.4.5l-.7.2Z" />
+          </svg>Add to Cart
+        </button>
+
+      </div>
+    </section>
     <section class="catalog">
       <div class="catalog-container container">
+        <div class="catalog-header hidden">
+          <h2>Fetured Items</h2>
+        </div>
         <div class="catalog-list">
-          <div class="catalog-card filter">
-            <details class="main-filter">
-              <summary>
-                <div class="main-filter-header">
-                  <h4>Filter</h4>
-                  <svg role="img" aria-label="filter" width="15" height="10" viewBox="0 0 15 10"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z" />
-                  </svg>
-                </div>
-              </summary>
-              <div class="main-filter-content">
-                <details class="main-filter-title">
-                  <summary>
-                    <h4>category</h4>
-                  </summary>
-                  <ul class="menu-dropdown-list">
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">Accessories</a></li>
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">Bags</a></li>
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">Denim</a></li>
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">Hoodies & Sweatshirts</a></li>
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">Jackets & Coats</a></li>
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">Polos</a></li>
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">Shirts</a></li>
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">Shoes</a></li>
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">Sweaters & Knits</a></li>
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">T-Shirts</a></li>
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">Tanks</a></li>
-                  </ul>
-                </details>
-                <details class="main-filter-title">
-                  <summary>                    
-                    <h4>BRAND</h4>
-                  </summary>
-                  <ul class="menu-dropdown-list">
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">brand1</a></li>
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">brand2</a></li>
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">brand3</a></li>
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">brand4</a></li>
-                  </ul>
-                </details>
-                <details class="main-filter-title">
-                  <summary>
-                    <h4>DESIGNER</h4>
-                  </summary>
-                  <ul class="menu-dropdown-list">
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">BY JULIA HOBBS</a></li>
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">BY ALEX KESSLER</a></li>
-                    <li class="menu-dropdown-item"><a href="#" class="menu-link">BY ELISEÉ BROWCHUK</a></li>
-                  </ul>
-                </details>
-            </details>
-          </div>
-          <div class="catalog-card filter">
-            <details>
-              <summary>
-                <h5>TRENDING NOW</h5>
-                <i class="fas fa-chevron-down"></i>
-              </summary>
-              <div class="expand-list">
-                <div>
-                  <input type="checkbox" id="xs" name="xs">
-                  <label for="xs">Sale</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="s" name="s">
-                  <label for="s">New arrivals</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="m" name="m">
-                  <label for="m">Last chance</label>
-                </div>
-              </div>
-            </details>
-            <details>
-              <summary>
-                <h5>Size</h5>
-                <i class="fas fa-chevron-down"></i>
-              </summary>
-              <div class="expand-list">
-                <div>
-                  <input type="checkbox" id="xs" name="xs">
-                  <label for="xs">XS</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="s" name="s">
-                  <label for="s">S</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="m" name="m">
-                  <label for="m">M</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="l" name="l">
-                  <label for="l">L</label>
-                </div>
-              </div>
-            </details>
-            <details>
-              <summary>
-                <h5>Price</h5>
-                <i class="fas fa-chevron-down"></i>
-              </summary>
-              <div class="expand-list">
-                <div>
-                  <input type="checkbox" id="xs" name="xs">
-                  <label for="xs">
-                    < $100</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="s" name="s">
-                  <label for="s">
-                    < $500</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="m" name="m">
-                  <label for="m">> $500</label>
-                </div>
-              </div>
-            </details>
-          </div>
-          <div class="catalog-card filter">
-          </div>
-          <a href="product.html">
-            <div class="catalog-card">
-              <img src="./img/Image__1.jpg" alt="ELLERY X M'O CAPSULE">
-              <div class="catalog-card-caption">
-                <h5>ELLERY X M'O CAPSULE</h5>
-                <p>Known for her sculptural takes on traditional tailoring,
-                  Australian arbiter of cool Kym Ellery teams up
-                  with Moda Operandi.
-                </p>
-                <p class="price">52.00</p>
-              </div>
-            </div>
-          </a>
-          <a href="product.html">
-            <div class="catalog-card">
-              <img src="./img/Image_2.jpg" alt="ELLERY X M'O CAPSULE">
-              <div class="catalog-card-caption">
-                <h5>ELLERY X M'O CAPSULE</h5>
-                <p>Known for her sculptural takes on traditional tailoring,
-                  Australian arbiter of cool Kym Ellery teams up
-                  with Moda Operandi.
-                </p>
-                <p class="price">52.00</p>
-              </div>
-            </div>
-          </a>
-          <a href="product.html">
-            <div class="catalog-card">
-              <img src="./img/Image__3.jpg" alt="ELLERY X M'O CAPSULE">
-              <div class="catalog-card-caption">
-                <h5>ELLERY X M'O CAPSULE</h5>
-                <p>Known for her sculptural takes on traditional tailoring,
-                  Australian arbiter of cool Kym Ellery teams up
-                  with Moda Operandi.
-                </p>
-                <p class="price">52.00</p>
-              </div>
-            </div>
-          </a>
           <a href="product.html">
             <div class="catalog-card">
               <img src="./img/Image__4.jpg" alt="ELLERY X M'O CAPSULE">
@@ -331,7 +263,7 @@
           </a>
           <a href="product.html">
             <div class="catalog-card">
-              <img src="./img/Image_5.jpg" alt="ELLERY X M'O CAPSULE">
+              <img src="./img/Image__5.jpg" alt="ELLERY X M'O CAPSULE">
               <div class="catalog-card-caption">
                 <h5>ELLERY X M'O CAPSULE</h5>
                 <p>Known for her sculptural takes on traditional tailoring,
@@ -344,46 +276,7 @@
           </a>
           <a href="product.html">
             <div class="catalog-card">
-              <img src="./img/Image_6.jpg" alt="ELLERY X M'O CAPSULE">
-              <div class="catalog-card-caption">
-                <h5>ELLERY X M'O CAPSULE</h5>
-                <p>Known for her sculptural takes on traditional tailoring,
-                  Australian arbiter of cool Kym Ellery teams up
-                  with Moda Operandi.
-                </p>
-                <p class="price">52.00</p>
-              </div>
-            </div>
-          </a>
-          <a href="product.html">
-            <div class="catalog-card">
-              <img src="./img/Image_7.jpg" alt="ELLERY X M'O CAPSULE">
-              <div class="catalog-card-caption">
-                <h5>ELLERY X M'O CAPSULE</h5>
-                <p>Known for her sculptural takes on traditional tailoring,
-                  Australian arbiter of cool Kym Ellery teams up
-                  with Moda Operandi.
-                </p>
-                <p class="price">52.00</p>
-              </div>
-            </div>
-          </a>
-          <a href="product.html">
-            <div class="catalog-card">
-              <img src="./img/Image_8.jpg" alt="ELLERY X M'O CAPSULE">
-              <div class="catalog-card-caption">
-                <h5>ELLERY X M'O CAPSULE</h5>
-                <p>Known for her sculptural takes on traditional tailoring,
-                  Australian arbiter of cool Kym Ellery teams up
-                  with Moda Operandi.
-                </p>
-                <p class="price">52.00</p>
-              </div>
-            </div>
-          </a>
-          <a href="product.html">
-            <div class="catalog-card">
-              <img src="./img/Image_9.jpg" alt="ELLERY X M'O CAPSULE">
+              <img src="./img/Image__6.jpg" alt="ELLERY X M'O CAPSULE">
               <div class="catalog-card-caption">
                 <h5>ELLERY X M'O CAPSULE</h5>
                 <p>Known for her sculptural takes on traditional tailoring,
@@ -396,61 +289,9 @@
           </a>
         </div>
       </div>
-      <div class="pagination">
-        <ul class="pagination-container">
-          <li class="pagination-item"><a href="#" class="page-link"><i class="fas fa-chevron-left"></i></a></li>
-          <li class="pagination-item"><a href="#" class="page-link active">1</a></li>
-          <li class="pagination-item"><a href="#" class="page-link">2</a></li>
-          <li class="pagination-item"><a href="#" class="page-link">3</a></li>
-          <li class="pagination-item"><a href="#" class="page-link">4</a></li>
-          <li class="pagination-item"><a href="#" class="page-link">5</a></li>
-          <li class="pagination-item"><a href="#" class="page-link">6</a></li>
-          <li class="pagination-item"><a href="#" class="page-link">.....</a></li>
-          <li class="pagination-item"><a href="#" class="page-link">20</a></li>
-          <li class="pagination-item"><a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a></li>
-        </ul>
-      </div>
-      </div>
     </section>
-
   </main>
-
   <aside>
-    <section class="advantages">
-      <div class="advantages-container container">
-        <div class="advantages-item">
-          <div class="icon">
-            <img src="./img/delivery.svg" alt="Delivery">
-          </div>
-          <h4>Free Delivery</h4>
-          <p>Worldwide delivery on all. Authorit tively morph next-generation
-            innov tion with extensive models.
-          </p>
-        </div>
-        <div class="advantages-item">
-          <div class="icon">
-            <img src="./img/sales.svg" alt="Sales & discounts">
-          </div>
-
-          <h4>Sales & discounts</h4>
-          <p>Worldwide delivery on all. Authorit tively morph next-generation
-            innov tion with extensive models.
-          </p>
-        </div>
-        <div class="advantages-item">
-          <div class="icon">
-            <img src="./img/assurance.svg" alt="Quality assurance">
-
-          </div>
-          <h4>Quality assurance</h4>
-          <p>Worldwide delivery on all.
-            Authorit tively morph next-generation
-            innov tion with extensive models.
-          </p>
-        </div>
-      </div>
-    </section>
-
     <section class="feedback">
       <div class="wrap">
         <div class="feedback-container">
@@ -494,7 +335,6 @@
     </div>
   </footer>
   <script src="./js/script.js"></script>
-
 </body>
 
 </html>
