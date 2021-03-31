@@ -3,9 +3,13 @@
     transition: .5s                 
     &-items
         +flexAlign(row, space-between, flex-start)
-        padding-top: 3rem    
+        padding-top: 3rem        
         &-list
-           flex: 50%             
+           flex: 50% 
+        @include break(1200px)            
+            flex-direction: column
+            align-items: center
+            padding: 3rem 1rem 0  1rem          
     &-product
         position: relative
         &:hover            
@@ -35,11 +39,19 @@
             width: 1.1rem
             height: 1.1rem
     &-info
-        width: 32%        
+        width: 32%
+        @include break(1200px) 
+            display: flex           
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            width: 100%                          
     &-form
         padding: 1rem 0  
         margin-bottom: 1.7rem  
         +flexAlign(column, center, flex-start)
+        @include break(1200px) 
+        min-width: 22.5rem
         h4
             font-weight: 300
             margin-bottom: 1.2rem 
@@ -50,6 +62,7 @@
             margin-bottom: 1.2rem 
             &:hover
                 color: #B1B1B1
+                min-width: 22rem 
     &-checkout         
         padding: 2.5rem
         background: #F5F3F3

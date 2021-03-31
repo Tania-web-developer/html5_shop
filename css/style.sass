@@ -2,7 +2,9 @@
 @import "variables"
 @import "animation"    
 @import "mixins"
+@import "breakpoints"
 @import "base"
+
 
 @import "modules/header" 
 @import "modules/promo"
@@ -11,43 +13,6 @@
 @import "modules/cart"
 @import "modules/aside"
 @import "modules/registration"
-
-/* aside */
-
-
-
-
-
-.main-header
-    @extend %center 
-    background: $main-bg-color
-    
-.main-header-container    
-    display: flex
-    justify-content: space-between    
-    padding: 3.6rem 0 
-    .main-title
-        h1
-            color: $accent
-            font-size: 1.5rem
-            font-weight: 400
-    .breadcrumb
-        display: flex
-        margin: auto 0
-        text-transform: uppercase
-        color: #636363
-        a
-            &:hover
-                color: $accent
-
-
-/* filter */ 
-    
-
-   
-
- 
-
 @import "modules/product"         
 @import "modules/footer" 
      

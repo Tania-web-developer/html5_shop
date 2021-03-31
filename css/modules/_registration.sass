@@ -1,10 +1,17 @@
 .registration
-    @extend %center                  
+    @extend %center 
+    transition: .5s                       
     &-items
         +flexAlign(row, space-between, flex-start)
-        flex-basis: 50%         
+        flex-basis: 50%
+        @include break(950px) 
+            padding: 0 1rem
+        @include break(750px)
+            +flexAlign(column, center, center)
     &-form
         max-width: 360px
+        @include break(1200px)
+            min-width: 360px  
         @extend %form 
         h3
             font-size: 1rem
@@ -18,7 +25,7 @@
             margin-bottom: 2.2rem         
     &-form-question 
         max-width: 40%        
-        margin-bottom: 2rem              
+        margin-bottom: 2rem       
         +flexAlign(row, space-between, center)
         input
             display: none
@@ -37,7 +44,9 @@
         svg            
             margin-left: .8rem
     &-benefits
-        padding: 1rem 2rem 0 8rem 
+        padding: 1rem 2rem 0 8rem
+        @include break(1200px)
+            padding: 1rem 0rem 0 3rem             
         h3
             font-weight: 300
             margin-bottom: 1rem
@@ -45,19 +54,25 @@
         font-size: 1.5rem 
         color: black
         line-height: 1.3
+        @include break(1200px)
+            font-size: 1rem 
 
     ul
         font-size: 1.5rem 
         font-weight: 300
         color: black
-        padding: 0  
+        padding: 0 
+        transition: .5s         
         li
             padding: .5rem  0
+            @include break(1200px)
+                font-size: 1rem
+                padding: 1rem            
             &::before
-                content: " "
+                content: " "                
                 display: inline-block
                 position: relative                
-                margin: 0 1rem 0 0
+                margin: 0 1rem 0 0                
                 width: 20px
                 height: 16px               
                 background: url("../../img/check.svg") center/cover no-repeat 

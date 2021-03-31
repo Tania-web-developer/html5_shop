@@ -1,15 +1,59 @@
 .header
     @extend %center    
     background-color: $header-bg 
-    color: white   
+    color: white
+    width: 100% 
+    position: fixed 
+    z-index: 300
+    transition: .5s    
+
+.main-header
+    @extend %center 
+    background: $main-bg-color
     
+.main-header-container    
+    display: flex
+    justify-content: space-between   
+    padding: 8rem  0 3.6rem 0  
+    @include break(950px)
+        margin-left: 1rem
+        margin-right: 1rem
+    @include break(490px)
+        flex-direction: column
+        align-items: center 
+        padding: 6rem  0 3.6rem 0
+        margin: 0
+    .main-title
+        @include break(490px)
+            margin-bottom: 2rem       
+        h1
+            color: $accent
+            font-size: 1.5rem
+            font-weight: 400
+    .breadcrumb
+        display: flex
+        margin: auto 0
+        text-transform: uppercase
+        color: #636363
+        a
+            &:hover
+                color: $accent
+        @include break(490px)
+            h5
+                font-size: .8rem
     
+        
+     
 .nav
     display: flex 
     position: relative    
     justify-content: space-between 
     align-items: center 
-    padding: 1rem 0 
+    padding: 1rem 0
+    transition: .5s  
+    @include break(950px) 
+        padding-left: 1rem 
+        padding-right: 1rem    
     &-right
         display: flex         
     &-btn
@@ -60,6 +104,8 @@
     &-link
         color: #6F6E6E;
         font-size: .9rem
+        &:hover
+            color: $accent
 
 
 
@@ -84,9 +130,17 @@
     right: 2px;
     
 
-
+.brand-1 
+    animation: brand_animation 1.7s linear
+    @include break(950px)
+        animation: none
+          
+    &:hover
+        transform: scale(1.2)
 
     
            
 
-
+@include break(768px)
+    .login, .cart
+        display: none
