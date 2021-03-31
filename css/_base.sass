@@ -90,15 +90,21 @@ video
     padding: 1rem 2.5rem 
     color: $accent 
     border: solid 1px $accent 
-    background-color: white 
+    background-color: white
+    background-image: linear-gradient(45deg, $accent 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
     cursor: pointer
     fill: $accent
+    transition: all .5s ease-in-out
     &:hover
-        background-color: $accent 
+        background-position: 0; 
         color: white
         fill: white 
     &:focus
-        outline: none
+        outline: none        
+    &:active
+        transform: translateY(3px)    
 
 %btn-icon
     position: relative 
@@ -107,10 +113,30 @@ video
     border: none 
     padding: 0
     margin: 0 .8rem 
+    transition: all .5ss 
     &:focus
         outline: none
-        color: grey   
+        color: grey 
+    &:active
+        transform: translateY(3px)
    
+%form
+    padding: 1rem 0  
+    margin-bottom: 1.7rem  
+    +flexAlign(column, center, flex-start)
+    h4
+        font-weight: 300
+        margin-bottom: 1.2rem 
+    input
+        width: 100%
+        font-size: .8rem            
+        padding: 1rem 1.3rem
+        margin-bottom: 1.2rem 
+        &::placeholder
+            color: #B1B1B1
+           
+           
+
 
 
 .active
@@ -127,9 +153,10 @@ details
         color: #6F6E6E       
         &:hover
             color: $accent
+        &:active            
             i 
                 &:nth-child(2)                                                                     
-                    +transform(rotate(-90deg))
+                        +transform(rotate(-90deg))
         h5
             margin-right:.5rem!important
         &::-webkit-details-marker 
@@ -150,6 +177,7 @@ details
     padding: .5rem
     color: #6F6E6E
     font-weight: 400
+    animation: showSmallFilter .5s linear
 
 .details-quantity    
     &-input
@@ -189,5 +217,6 @@ details
             .fas
                 color: black
                 &:hover
-                    color: $accent   
+                    color: $accent
+                    animation: pulse .5s infinite    
                     

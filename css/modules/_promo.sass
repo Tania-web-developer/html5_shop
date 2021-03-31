@@ -1,8 +1,8 @@
 .promo
     @extend %center
-    background-color: #F1E4E6
+    background-color: #F1E4E6    
     img
-        display: block  
+        display: block        
     &-container
         display: flex 
         align-items: center 
@@ -13,9 +13,20 @@
     &-caption
         border-left: solid #F16D7F 12px 
         padding: .3rem 0 .3rem .8rem 
-        line-height: 0.9 
+        line-height: 0.9
+        animation: promo_caption 3s  1
+        
     span
         font-size: 2rem 
         font-weight: 700
     span:nth-child(3)
         color: #F16D7F  
+
+    .promo-brand        
+        position: absolute
+        opacity: 0 
+        width: 250px
+        height: 150px
+        background: url("../../img/brand_bg.svg") center/contain no-repeat 
+        animation: promo_brand 2s 1  
+        

@@ -40,7 +40,9 @@
     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
     width: 14.5rem  
     padding: 2rem
-    position: relative    
+    position: relative 
+    transition: 1s
+    animation: show .5s linear    
     &-close-btn 
         position: absolute
         right: 10px
@@ -70,7 +72,9 @@
     top: 4.5rem      
     justify-content: flex-end
     height: 100vh
-    display: none    
+    display: none  
+    z-index: 200
+    transition: 1s
     &-open
         display: flex
 
@@ -81,4 +85,8 @@
     
 
 
+
     
+           
+
+
